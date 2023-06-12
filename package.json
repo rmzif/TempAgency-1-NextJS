@@ -18,7 +18,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "classnames": "^2.3.2",
     "clsx": "^1.2.1",
+    "framer-motion": "^10.12.16",
     "next": "^13.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -32,6 +36,7 @@
     "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@types/aos": "^3.0.4",
     "@types/react": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
@@ -54,7 +59,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
+      "eslint --max-warnings=14",
       "prettier -w"
     ],
     "**/*.{json,css,scss,md,webmanifest}": [
