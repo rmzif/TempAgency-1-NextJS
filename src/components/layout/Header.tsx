@@ -2,10 +2,8 @@ import { Dialog, Popover } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+import Image from 'next/image';
+import Link from 'next/link';
 
 const headerArray = [
   {
@@ -41,14 +39,17 @@ export default function Header() {
         aria-label='Global'
       >
         <div className='flex lg:flex-1'>
-          <a href='#' className='-m-1.5 p-1.5'>
+          <Link href='/'>
             <span className='sr-only'>Your Company</span>
-            <img
+            <Image
               className='h-12 w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56'
-              src='svg/LogoHeader.svg'
+              src='/svg/LogoHeader.svg'
+              alt='Your Company'
               id='imageId'
+              width={12}
+              height={12}
             />
-          </a>
+          </Link>
         </div>
         <div className='flex lg:hidden'>
           {/* responsive button for mobile users to open header */}
@@ -71,9 +72,9 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.4 * id }}
             >
-              <a href={href} className='leading-6 text-white'>
+              <Link href={href} className='leading-6 text-white'>
                 {title}
-              </a>
+              </Link>
             </motion.div>
           ))}
         </Popover.Group>
@@ -88,14 +89,17 @@ export default function Header() {
         <div className='fixed inset-0 z-10' />
         <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
-            <a href='#' className='-m-1.5 p-1.5'>
+            <Link href='#' className='-m-1.5 p-1.5'>
               <span className='sr-only'>Your Company</span>
-              <img
+              <Image
                 className='h-12 w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56'
                 src='svg/Logo.svg'
                 id='imageId'
+                alt='header-logo'
+                width={12}
+                height={12}
               />
-            </a>
+            </Link>
             <button
               type='button'
               className='-m-2.5 rounded-md p-2.5 text-black'
@@ -111,13 +115,13 @@ export default function Header() {
               <div className='space-y-2 py-6'>
                 {headerArray.map(({ id, title, href }) => {
                   return (
-                    <a
+                    <Link
                       href={href}
                       className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-orange hover:bg-gray-50 '
                       key={id}
                     >
                       {title}
-                    </a>
+                    </Link>
                   );
                 })}
               </div>

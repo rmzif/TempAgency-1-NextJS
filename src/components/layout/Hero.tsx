@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -17,11 +18,14 @@ export default function Hero() {
       <div className='col-span-4 ml-4 mr-4 mt-32 grid md:ml-12 md:mt-32 '>
         <div className='relative grid justify-center grayscale-[20%]'>
           {/* Hero image */}
-          <img
+          <Image
             className='h-full w-full object-cover'
             id='imageId'
             alt='hero-image'
-            src='images/cube.png'
+            src='/images/cube.png'
+            width={150}
+            height={150}
+            layout='responsive'
           />
         </div>
       </div>

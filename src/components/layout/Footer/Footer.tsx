@@ -4,6 +4,7 @@ import {
   aboutUsArray,
   ourServiceArray,
 } from '@/components/layout/Footer/footerArray';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
           </strong>
 
           {/* button component using props */}
-          <Button buttonLink='/Services' buttonText='Contact Us' />
+          <Button buttonLink='/Contact' buttonText='Contact Us' />
         </div>
 
         <div className='mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4'>
@@ -129,7 +130,13 @@ export default function Footer() {
           <div className=' sm:flex sm:items-center sm:justify-between'>
             <div className='flex justify-center sm:justify-start'>
               {/* Company logo in the footer */}
-              <img className='mt-12 w-32 md:mt-0' src='/svg/Logo.svg' />
+              <Image
+                alt='footer-image'
+                height={12}
+                width={12}
+                className='mt-12 w-32 md:mt-0'
+                src='/svg/Logo.svg'
+              />
             </div>
 
             <p className='mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right'>

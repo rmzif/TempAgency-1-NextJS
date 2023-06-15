@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Section() {
   return (
@@ -6,11 +7,13 @@ export default function Section() {
       <div className='mt-12 grid grid-cols-4 md:mt-32'>
         <div className='col-span-4 ml-12 mr-12 grid justify-end md:ml-24 md:mr-24'>
           {/* Section logo */}
-          <img
+          <Image
             id='animated-logo'
             className='ml-4 h-24 w-24 sm:w-32 md:h-12 md:w-40 lg:w-48 xl:w-56'
             src='/svg/logo.svg'
             alt='navbar-logo'
+            height={12}
+            width={12}
           />
         </div>
         <div className='col-span-4 ml-12 mr-12 grid justify-start md:ml-24 md:mr-24'>
@@ -25,14 +28,14 @@ export default function Section() {
         >
           {/* Section text */}
           <h1 className='text-3xl leading-3 text-gray-600 md:ml-4'>
-            Ons hart klopt voor uitzonderlijk design - wij analyseren en
-            adviseren. We leven digitaal{' '}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod{' '}
             <span role='img' aria-label='alien'>
               👾
             </span>
-            , lossen problemen op en begeleiden onze klanten doelgericht en op
-            lange termijn. Zo worden klanten eerst tevreden klanten en
-            vervolgens vrienden.
+            , unde omnis iste natus error sit voluptatem accusantium veritatis
+            et quasi architecto beatae vitae dicta explicabo. Nemo enim ipsam
+            voluptatem
           </h1>
         </div>
         {/* black thin border-line */}
