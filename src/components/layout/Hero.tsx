@@ -11,8 +11,8 @@ export default function Hero() {
           className='text-3xl text-black sm:text-4xl md:ml-12 md:text-6xl'
           style={{ lineHeight: '1.3' }}
         >
-          Wij zijn <span className='text-orange'>Pixelperfectie</span> -<br />
-          Jouw webdesign + branding Bureau uit München.
+          We are <span className='text-orange'>PixelCorp</span> -<br />
+          Your webdesign + branding office from plan earth.
         </h1>
       </div>
       <div className='col-span-4 ml-4 mr-4 mt-32 grid md:ml-12 md:mt-32 '>
